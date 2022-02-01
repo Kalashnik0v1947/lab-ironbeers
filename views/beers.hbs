@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+<title>All Beers</title>
+<link rel='stylesheet' href='/stylesheets/styles.css'/>
+        </head>
+        <nav>
+    <a href="/">Home</a>
+    <a href="/beers">Beers</a>
+    <a href="/random-beer">Random Beer</a>
+</nav>
+<div class="beers"> 
+     {{#each beersFromApi}}
+    <img class="beerpic" src="{{this.image_url}}">
+    <p>{{this.name}}</p>
+    <p>{{this.description}}</p>
+    <p>{{this.tagline}}</p>
+    <hr />
+   {{/each}}
+</div>
+  <div class="footer">
+  <p>Developed by Ironhack ;)</p>
+</div>
+
+</html>

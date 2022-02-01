@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+<title>Random Beer</title>
+<link rel='stylesheet' href='/stylesheets/styles.css'/>
+        </head>
+        <nav>
+    <a href="/">Home</a>
+    <a href="/beers">Beers</a>
+    <a href="/random-beer">Random Beer</a>
+</nav>
+<div class="beers"> 
+
+    <img class="beerpic" src="{{beer.image_url}}">
+    <p>{{beer.name}}</p>
+    <p>{{beer.description}}</p>
+    <p>{{beer.tagline}}</p>
+
+     <h2>Food Pairing </h2>
+     <ul>
+{{#each beer.food_pairing}}
+<li>{{this}}</li>
+{{/each}}
+        </ul>
+<h2>Brewers Tips</h2>
+<p>{{beer.brewers_tips}}</p>
+    <br />
+
+</div>
+<div class="footer">
+  <p>Developed by Ironhack ;)</p>
+</div>
+
+</html>
